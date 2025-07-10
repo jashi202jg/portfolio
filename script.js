@@ -229,15 +229,44 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const text = heroTitle.innerHTML;
+        const originalHTML = heroTitle.innerHTML;
+        
+        // Extract the text content while preserving HTML structure
+        const textParts = [
+            "Hi, I'm ",
+            "Jashim"
+        ];
+        
         heroTitle.innerHTML = '';
         
-        let i = 0;
+        let currentPart = 0;
+        let currentChar = 0;
+        
         function typeWriter() {
-            if (i < text.length) {
-                heroTitle.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
+            if (currentPart < textParts.length) {
+                const currentText = textParts[currentPart];
+                
+                if (currentChar < currentText.length) {
+                    if (currentPart === 0) {
+                        heroTitle.innerHTML += currentText.charAt(currentChar);
+                    } else {
+                        // For the name part, wrap in gradient span
+                        const nameSpan = heroTitle.querySelector('.gradient-text') || document.createElement('span');
+                        nameSpan.className = 'gradient-text';
+                        nameSpan.textContent += currentText.charAt(currentChar);
+                        
+                        if (!heroTitle.querySelector('.gradient-text')) {
+                            heroTitle.appendChild(nameSpan);
+                        }
+                    }
+                    currentChar++;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    // Move to next part
+                    currentPart++;
+                    currentChar = 0;
+                    setTimeout(typeWriter, 50);
+                }
             }
         }
         
