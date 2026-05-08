@@ -43,16 +43,92 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
-window.addEventListener('scroll', function() {
+// Premium scroll effects
+document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.3)';
+    const hero = document.querySelector('.hero');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Create top progress indicator
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    document.body.appendChild(progressBar);
+
+    // Add reveal classes with staggered delays
+    const revealMap = [
+        ['.hero-text', 'reveal-left'],
+        ['.hero-image', 'reveal-right'],
+        ['.section-header', 'reveal'],
+        ['.about-text p', 'reveal'],
+        ['.about-info', 'reveal-right'],
+        ['.stat', 'reveal-scale'],
+        ['.skill-category', 'reveal-scale'],
+        ['.timeline-item', 'reveal-left'],
+        ['.project-card', 'reveal'],
+        ['.contact-item', 'reveal-right']
+    ];
+
+    revealMap.forEach(([selector, variant]) => {
+        const nodes = document.querySelectorAll(selector);
+        nodes.forEach((node, index) => {
+            node.classList.add('reveal', variant);
+            node.classList.add(`reveal-delay-${index % 4}`);
+        });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.14,
+        rootMargin: '0px 0px -10% 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach((item) => {
+        revealObserver.observe(item);
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-in-view');
+            }
+        });
+    }, {
+        threshold: 0.35
+    });
+
+    sections.forEach((section) => sectionObserver.observe(section));
+
+    let ticking = false;
+
+    function handleScrollEffects() {
+        const scrollTop = window.scrollY;
+        const maxScrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScrollable > 0 ? (scrollTop / maxScrollable) * 100 : 0;
+
+        progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+        navbar.classList.toggle('scrolled', scrollTop > 50);
+
+        if (hero) {
+            const heroShift = Math.min(22, scrollTop * 0.08);
+            hero.style.backgroundPosition = `center calc(50% + ${heroShift}px)`;
+        }
+
+        ticking = false;
     }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(handleScrollEffects);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    handleScrollEffects();
 });
 
 // Active navigation link highlighting

@@ -1,391 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jashim Gafoor K K - Full Stack Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jashim Gafoor K K | Full Stack Developer</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .projects-cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: var(--vspace-0_75);
+            margin-top: var(--vspace-1);
+        }
+
+        .project-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-11);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 34px rgba(0, 0, 0, 0.14);
+        }
+
+        .project-card__media {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: scale-down;
+            border-bottom: 1px solid var(--color-gray-11);
+        }
+
+        .project-card__body {
+            padding: var(--vspace-0_75) var(--vspace-0_75) var(--vspace-0_875);
+        }
+
+        .project-card__title {
+            margin: 0 0 var(--vspace-0_25) 0;
+            font-family: var(--font-1);
+            font-size: var(--text-md);
+            line-height: 1.25;
+            color: var(--color-text-dark);
+        }
+
+        .project-card__stack {
+            margin: 0 0 var(--vspace-0_5) 0;
+            font-size: var(--text-sm);
+            line-height: 1.5;
+            color: var(--color-1);
+            font-weight: 600;
+        }
+
+        .project-card__desc {
+            margin: 0;
+            font-size: var(--text-sm);
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        @media screen and (max-width: 1200px) {
+            .projects-cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .projects-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card__media {
+                height: 200px;
+            }
+        }
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">#helloworld!</span>
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+
+        <header class="s-header">
+            <div class="row s-header__inner">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <span style="color: #fff;">#helloworld!</span>
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+
+                <nav class="s-header__nav">
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="#about">About</a></li>
+                        <li><a class="smoothscroll" href="#works">Works</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+        </header>
+
+        <section id="intro" class="s-intro target-section">
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+                    <div class="s-intro__content-text">
+                        <div class="s-intro__content-pretitle text-pretitle">Hello</div>
+                        <h1 class="s-intro__content-title">
+                            I'm Jashim Gafoor<br>
+                            Software developer
+                        </h1>
+
+                        <div class="s-intro__content-btns">
+                            <a class="smoothscroll btn" href="#about">More About Me</a>
+                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="s-intro__social social-list">
+                <li>
+                    <a href="mailto:jashi202jg@gmail.com">
+                        <span class="u-screen-reader-text">Email</span>
+                        @
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                <li>
+                    <a href="http://linkedin.com/in/jashim-gafoor-k-k" target="_blank" rel="noreferrer">
+                        <span class="u-screen-reader-text">LinkedIn</span>
+                        in
+                    </a>
                 </li>
             </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Jashim</span>
-                    </h1>
-                    <h2 class="hero-subtitle">Full Stack Software Developer</h2>
-                    <p class="hero-description">
-                        Full Stack Developer with 7+ years of experience building and scaling web and mobile applications across fintech, healthcare, and education domains. Specialized in Angular, .NET, C#, Django and SQL, with strong ownership of the full development lifecycle.
+            <div class="s-intro__content-media">
+                <img src="assets/images/me.jpeg" alt="Jashim Gafoor K K">
+            </div>
+
+            <div class="s-intro__btn-download">
+                <a class="btn btn--stroke" target="_blank" href="assets/docs/Jashim_Gafoor_CV.pdf" download="Jashim_Gafoor_CV.pdf">Get My CV</a>
+            </div>
+
+            <div class="s-intro__scroll-down">
+                <a href="#about" class="smoothscroll">
+                    <div class="scroll-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
+                    </div>
+                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="s-about target-section">
+            <div class="row s-about__content">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">About Me.</h2>
+                    </div>
+
+                    <p class="attention-getter">
+                        Full Stack Developer with 7+ years of experience building and scaling web and mobile applications across fintech, healthcare, and education domains. I specialize in Angular, .NET, C#, Django, SQL, and own the full lifecycle from architecture to deployment.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="Jashim_Gafoor_CV.pdf" target="_blank" class="btn btn-primary" download="Jashim_Gafoor_CV.pdf">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <a href="#projects" class="btn btn-secondary">View Projects</a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="mailto:jashi202jg@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="http://linkedin.com/in/jashim-gafoor-k-k" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-avatar">
-                        <img src="me.jpeg" alt="Jashim Gafoor K K" class="avatar-image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Learn more about my background and expertise</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate Full Stack Developer with 7+ years of experience building and scaling web and mobile applications across fintech, healthcare, and education domains. My expertise spans across frontend and backend technologies, with a strong focus on Angular, .NET, C#, Django, and cloud platforms like AWS and Azure.
+                    <p class="attention-getter">
+                        I have led end-to-end delivery of multiple products, worked with cross-functional teams for clients across India, the US, and Canada, and focused on building reliable, user-centered systems with strong performance and maintainability.
                     </p>
-                    <p>
-                        Throughout my career, I've successfully delivered high-impact solutions, leading end-to-end development of multiple applications from architecture to deployment. Known for delivering reliable, user-focused solutions and collaborating with cross-functional teams for clients across India, the US, and Canada. I have experience leading teams, mentoring junior developers, and handling complete product life cycles.
+
+                    <div class="grid-list-items s-about__blocks">
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Experience</h4>
+                            <ul class="s-about__list">
+                                <li>RCKR Softwares <span>Full Stack Developer (2019 - Present)</span></li>
+                                <!-- <li>Team Leadership <span>Lead Developer and Mentor</span></li>
+                                <li>Delivery Ownership <span>Architecture to Production</span></li> -->
+                            </ul>
+                        </div>
+
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Highlights</h4>
+                            <ul class="s-about__list">
+                                <li>7+ Years <span>Professional Experience</span></li>
+                                <li>3+ Domains <span>Fintech, Healthcare, Education</span></li>
+                                <li>Global Clients <span>India, US, Canada</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Tech Stack</h4>
+                            <ul class="s-about__list">
+                                <li>Angular, JavaScript, HTML, CSS</li>
+                                <li>.NET, C#, Django, REST APIs</li>
+                                <li>SQL Server, PostgreSQL</li>
+                                <li>AWS, Azure, Git, Jira</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="s-works target-section">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">Selected Projects.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="projects-cards">
+                        <article class="project-card">
+                            <img class="project-card__media" src="assets/images/ACC.jpg" alt="Appalachian Community Capital project thumbnail">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">ACC</h3>
+                                <p class="project-card__stack">Angular 18, Django, SQL, Azure</p>
+                                <p class="project-card__desc">Built a financial platform connecting CDFIs with small businesses to improve access to funding opportunities. Led a team of 4 and owned architecture and delivery.</p>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <img class="project-card__media" src="assets/images/trubridge.jpg" alt="TrueBridge project thumbnail">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">TruBridge (Get Real Health)</h3>
+                                <p class="project-card__stack">Angular, .NET, C#, SQL, HealthKit</p>
+                                <p class="project-card__desc">Contributed to a healthcare coordination platform used by the Alberta Government. Integrated Apple HealthKit for real-time patient health insights.</p>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <img class="project-card__media" src="assets/images/prifact.png" alt="Prifact project thumbnail">
+                            <div class="project-card__body">
+                                <h3 class="project-card__title">priFact</h3>
+                                <p class="project-card__stack">Angular, Django, .NET, AWS, Azure</p>
+                                <p class="project-card__desc">Delivered and maintained production-ready web and mobile solutions with robust APIs, cloud deployments, and performance optimizations across domains.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="numbers" class="s-numbers">
+            <div class="row counter-items">
+                <div class="column counter-items__item">
+                    <div class="num">7<span>+</span></div>
+                    <h5>Years Experience</h5>
+                    <p>Hands-on delivery across full stack web and mobile development.</p>
+                </div>
+
+                <div class="column counter-items__item">
+                    <div class="num">3<span>+</span></div>
+                    <h5>Core Domains</h5>
+                    <p>Fintech, healthcare, and education product development.</p>
+                </div>
+
+                <div class="column counter-items__item">
+                    <div class="num">10<span>+</span></div>
+                    <h5>Production Releases</h5>
+                    <p>Delivered and maintained apps through active production cycles.</p>
+                </div>
+
+                <div class="column counter-items__item">
+                    <div class="num">100<span>%</span></div>
+                    <h5>Ownership Mindset</h5>
+                    <p>Architecture, coding, deployment, and post-release support.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="s-footer target-section">
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark" data-num="03">
+                        <h2 class="text-display-title">Get In Touch.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">
+                    <p class="attention-getter">
+                        Open to full stack software development opportunities and collaboration on impactful products.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>7+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Major Projects</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Malappuram, Kerala, India</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>B.Tech in Computer Science</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-university"></i>
-                        <span>Government Engineering College, Thrissur</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-calendar"></i>
-                        <span>Graduated: 2019 | CGPA: 8.2/10</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-angular"></i>
-                            <span>Angular</span>
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                                <li><a href="http://linkedin.com/in/jashim-gafoor-k-k" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                            </ul>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Cordova</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Django</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>C#</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>.NET</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-exchange-alt"></i>
-                            <span>REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Database</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL Server</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-elephant"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-tasks"></i>
-                            <span>Jira</span>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:jashi202jg@gmail.com">jashi202jg@gmail.com</a></li>
+                                <li><a href="#0">Malappuram, Kerala, India</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">My journey in software development</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Full Stack Developer</h3>
-                            <span class="company">RCKR Softwares, Bangalore, India</span>
-                            <span class="duration">2019 – Present</span>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Led end-to-end development of multiple web and mobile applications, covering architecture, development, deployment, and maintenance</li>
-                            <li>Built scalable front-end and backend systems using Angular, Django, and .NET</li>
-                            <li>Designed REST APIs and integrated third-party services for reliable data exchange</li>
-                            <li>Managed deployments on AWS and Azure, improving system stability and release efficiency</li>
-                            <li>Reduced production issues through debugging and performance optimization</li>
-                            <li>Mentored junior developers and supported overall team delivery</li>
-                        </ul>
-                    </div>
+            <div class="row s-footer__buttons">
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:jashi202jg@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+                <div class="column xl-6 tab-12">
+                    <a href="assets/docs/Jashim_Gafoor_CV.pdf" target="_blank" class="btn btn--stroke btn--large u-fullwidth" download="Jashim_Gafoor_CV.pdf">Get My CV</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Key projects showcasing my expertise</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Appalachian Community Capital</h3>
-                        <span class="project-period">2024 – Present</span>
-                    </div>
-                    <p class="project-description">
-                        Led a team of 4 to build a financial platform connecting CDFIs with small businesses, enabling access to funding opportunities. Built from scratch, defining architecture and leading end-to-end delivery. Utilized Azure services including Service Bus, Function Apps, and Application Insights for asynchronous workflows and monitoring.
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li><a href="mailto:jashi202jg@gmail.com"><span class="u-screen-reader-text">Email</span>@</a></li>
+                        <li><a href="http://linkedin.com/in/jashim-gafoor-k-k" target="_blank" rel="noreferrer"><span class="u-screen-reader-text">LinkedIn</span>in</a></li>
+                    </ul>
+                </div>
+
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>2026 © Jashim Gafoor K K</span>
+                        <span>Made with ❤️</span>
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Angular 18</span>
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Azure DevOps</span>
-                    </div>
-                    <div class="project-role">
-                        <i class="fas fa-user-tie"></i>
-                        <span>Lead Developer & Team Manager</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>TrueBridge (Get Real Health)</h3>
-                        <span class="project-period">2022 – 2023</span>
-                    </div>
-                    <p class="project-description">
-                        Contributed to a healthcare coordination platform for Alberta Government used for managing patient data and health insights. Integrated Apple HealthKit for real-time health metrics, enhancing patient monitoring capabilities. Ensured secure and efficient data synchronization.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">.NET</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">HealthKit</span>
-                    </div>
-                    <div class="project-role">
-                        <i class="fas fa-code"></i>
-                        <span>Full Stack Developer</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>priFact</h3>
-                        <span class="project-period">2019 – 2022</span>
-                    </div>
-                    <p class="project-description">
-                        Built an education SaaS platform used by schools to manage students, teachers, and administrative workflows. Gathered client requirements and translated them into working features. Developed core modules including user management, reporting, and communication tools. Managed deployment using AWS services like S3, Lambda, and CloudWatch.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">.NET</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">AWS</span>
-                    </div>
-                    <div class="project-role">
-                        <i class="fas fa-cogs"></i>
-                        <span>Full Stack Developer</span>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contact Information</h2>
-                <p class="section-subtitle">Feel free to reach out</p>
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>
+                <span>Back To Top</span>
             </div>
-            <div class="contact-info-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Location</h4>
-                        <p>Malappuram, Kerala</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Email</h4>
-                        <p>jashi202jg@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Phone</h4>
-                        <p>+91-9946167742</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>LinkedIn</h4>
-                        <p>linkedin.com/in/jashim-gafoor-k-k</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </footer>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Jashim Gafoor K K. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="mailto:jashi202jg@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="http://linkedin.com/in/jashim-gafoor-k-k" class="social-link" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
