@@ -97,6 +97,46 @@
                 height: 200px;
             }
         }
+
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tech-stack-grid li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tech-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            filter: grayscale(20%);
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.15);
+            filter: grayscale(0%);
+        }
+
+        @media screen and (max-width: 700px) {
+            .tech-stack-grid {
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+                gap: 15px;
+            }
+
+            .tech-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
     </style>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
@@ -231,11 +271,21 @@
 
                         <div class="grid-list-items__item s-about__block">
                             <h4 class="s-about__block-title">Tech Stack</h4>
-                            <ul class="s-about__list">
-                                <li>Angular, JavaScript, HTML, CSS</li>
-                                <li>.NET, C#, Django, REST APIs</li>
-                                <li>SQL Server, PostgreSQL</li>
-                                <li>AWS, Azure, Git, Jira</li>
+                            <ul class="tech-stack-grid">
+                                <li><img src="assets/images/tech/angular.png" alt="Angular" class="tech-icon" title="Angular"></li>
+                                <li><img src="assets/images/tech/js.png" alt="JavaScript" class="tech-icon" title="JavaScript"></li>
+                                <li><img src="assets/images/tech/html.png" alt="HTML" class="tech-icon" title="HTML"></li>
+                                <li><img src="assets/images/tech/css.png" alt="CSS" class="tech-icon" title="CSS"></li>
+                                <li><img src="assets/images/tech/net.png" alt=".NET" class="tech-icon" title=".NET"></li>
+                                <li><img src="assets/images/tech/django.png" alt="Django" class="tech-icon" title="Django"></li>
+                                <li><img src="assets/images/tech/sql.png" alt="SQL Server" class="tech-icon" title="SQL Server"></li>
+                                <li><img src="assets/images/tech/postgres.png" alt="PostgreSQL" class="tech-icon" title="PostgreSQL"></li>
+                                <li><img src="assets/images/tech/aws.png" alt="AWS" class="tech-icon" title="AWS"></li>
+                                <li><img src="assets/images/tech/azure.png" alt="Azure" class="tech-icon" title="Azure"></li>
+                                <li><img src="assets/images/tech/github.png" alt="GitHub" class="tech-icon" title="GitHub"></li>
+                                <li><img src="assets/images/tech/jira.png" alt="Jira" class="tech-icon" title="Jira"></li>
+                                <li><img src="assets/images/tech/arcgis.jpg" alt="ArcGIS" class="tech-icon" title="ArcGIS"></li>
+                                <li><img src="assets/images/tech/auth0.png" alt="Auth0" class="tech-icon" title="Auth0"></li>
                             </ul>
                         </div>
                     </div>
