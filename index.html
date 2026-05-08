@@ -17,6 +17,7 @@
         .name-highlight {
             color: var(--color-text-dark);
             font-weight: 700;
+            white-space: nowrap;
         }
 
         .job-title {
@@ -24,6 +25,21 @@
             font-weight: 400;
             font-size: 0.35em;
             font-family: monospace;
+        }
+
+        @media screen and (max-width: 700px) {
+            .s-intro__content-title br {
+                display: block;
+            }
+            
+            .name-highlight {
+                white-space: nowrap;
+            }
+            
+            .job-title {
+                display: inline-block;
+                margin-top: 10px;
+            }
         }
 
         .projects-cards {
