@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jashim Gafoor K K | Full Stack Developer</title>
+    <title>Jashim Gafoor K K | Senior Full Stack Developer</title>
+    <meta name="description" content="Senior Full Stack Developer with 7+ years of experience building enterprise web and mobile applications across fintech, healthcare, and education. Expert in Angular, Python (Django), .NET, Azure, AWS, and AI-powered solutions (LangGraph, RAG, Azure AI).">
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -56,6 +57,8 @@
             overflow: hidden;
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -69,33 +72,73 @@
             height: 220px;
             object-fit: scale-down;
             border-bottom: 1px solid var(--color-gray-11);
+            background: #fafafa;
         }
 
         .project-card__body {
             padding: var(--vspace-0_75) var(--vspace-0_75) var(--vspace-0_875);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .project-card__title {
-            margin: 0 0 var(--vspace-0_25) 0;
+            margin: 0 0 4px 0;
             font-family: var(--font-1);
             font-size: var(--text-md);
             line-height: 1.25;
             color: var(--color-text-dark);
         }
 
+        .project-card__role {
+            font-size: 0.85em;
+            font-weight: 600;
+            color: var(--color-1);
+            margin-bottom: var(--vspace-0_25);
+        }
+
         .project-card__stack {
             margin: 0 0 var(--vspace-0_5) 0;
-            font-size: var(--text-sm);
+            font-size: 0.85em;
             line-height: 1.5;
-            color: var(--color-1);
+            color: var(--color-text-dark);
             font-weight: 600;
         }
 
         .project-card__desc {
             margin: 0;
             font-size: var(--text-sm);
-            line-height: 1.7;
+            line-height: 1.6;
             color: var(--color-text);
+        }
+
+        .project-card__bullets {
+            margin: 10px 0 0 0;
+            padding-left: 1.2rem;
+            font-size: 0.85em;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        .project-card__bullets li {
+            margin-bottom: 6px;
+        }
+
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .skill-pill {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.78em;
+            font-weight: 500;
+            color: var(--color-text-dark);
         }
 
         @media screen and (max-width: 1200px) {
@@ -153,6 +196,29 @@
                 height: 50px;
             }
         }
+
+        .skills-summary {
+            margin-top: var(--vspace-1_5);
+            padding-top: var(--vspace-1);
+            border-top: 1px solid var(--color-gray-11);
+        }
+
+        .skills-category {
+            margin-bottom: var(--vspace-0_75);
+        }
+
+        .skills-category__title {
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--color-text-dark);
+            margin-bottom: 6px;
+        }
+
+        .skills-category__items {
+            font-size: var(--text-sm);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
     </style>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
@@ -200,8 +266,8 @@
                     <div class="s-intro__content-text">
                         <div class="s-intro__content-pretitle text-pretitle">Hello</div>
                         <h1 class="s-intro__content-title">
-                            I'm <span class="name-highlight">Jashim Gafoor</span><br>
-                            <span class="job-title">Full Stack Software Developer</span>
+                            I'm <span class="name-highlight">Jashim Gafoor K K</span><br>
+                            <span class="job-title">Senior Full Stack Developer</span>
                         </h1>
 
                         <div class="s-intro__content-btns">
@@ -223,6 +289,12 @@
                     <a href="http://linkedin.com/in/jashim-gafoor-k-k" target="_blank" rel="noreferrer">
                         <span class="u-screen-reader-text">LinkedIn</span>
                         in
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jashi202jg" target="_blank" rel="noreferrer">
+                        <span class="u-screen-reader-text">GitHub</span>
+                        gh
                     </a>
                 </li>
                 <li>
@@ -259,20 +331,27 @@
                     </div>
 
                     <p class="attention-getter">
-                        Full Stack Developer with 7+ years of experience building and scaling web and mobile applications across fintech, healthcare, and education domains. I specialize in Angular, .NET, C#, Django, SQL, and own the full lifecycle from architecture to deployment.
+                        Full Stack Developer with 7+ years of experience delivering enterprise applications across fintech, healthcare, and education. Experienced in Angular, Python (Django), .NET, SQL Server, Azure, and AWS, with expertise in building AI-powered solutions using LangGraph, RAG, Azure AI, and Vector search. Passionate about designing scalable, cloud-native applications and leading projects from architecture to production.
                     </p>
 
                     <p class="attention-getter">
-                        I have led end-to-end delivery of multiple products, worked with cross-functional teams for clients across India, the US, and Canada, and focused on building reliable, user-centered systems with strong performance and maintainability.
+                        Recognized as the <strong>Best Quarterly Performer (Q2 2022)</strong> at RCKR Softwares for outstanding technical contributions. Experienced in team leadership, architecture design, CI/CD pipeline establishment, and end-to-end product delivery for global clients across the US, Canada, and India.
                     </p>
 
                     <div class="grid-list-items s-about__blocks">
                         <div class="grid-list-items__item s-about__block">
                             <h4 class="s-about__block-title">Experience</h4>
                             <ul class="s-about__list">
-                                <li>RCKR Softwares <span>Full Stack Developer (2019 - Present)</span></li>
-                                <!-- <li>Team Leadership <span>Lead Developer and Mentor</span></li>
-                                <li>Delivery Ownership <span>Architecture to Production</span></li> -->
+                                <li>RCKR Softwares <span>Senior Full Stack Developer (2019 - Present)</span></li>
+                                <li>Recognition <span>Best Quarterly Performer (Q2 2022)</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Education</h4>
+                            <ul class="s-about__list">
+                                <li>B.Tech in Computer Science <span>Govt. Engineering College Thrissur (2019)</span></li>
+                                <li>Academic Record <span>CGPA: 8.2 / 10.0</span></li>
                             </ul>
                         </div>
 
@@ -280,30 +359,53 @@
                             <h4 class="s-about__block-title">Highlights</h4>
                             <ul class="s-about__list">
                                 <li>7+ Years <span>Professional Experience</span></li>
-                                <li>3+ Domains <span>Fintech, Healthcare, Education</span></li>
-                                <li>Global Clients <span>India, US, Canada</span></li>
+                                <li>3 Domains <span>Fintech, Healthcare, Education</span></li>
+                                <li>Global Reach <span>Clients in US, Canada, India</span></li>
                             </ul>
                         </div>
 
-                        <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">Tech Stack</h4>
+                        <div class="grid-list-items__item s-about__block" style="grid-column: span 3 / span 3;">
+                            <h4 class="s-about__block-title">Tech Stack & Tools</h4>
                             <ul class="tech-stack-grid">
-                                <li><img src="assets/images/tech/angular.png" alt="Angular" class="tech-icon" title="Angular"></li>
-                                <li><img src="assets/images/tech/js.png" alt="JavaScript" class="tech-icon" title="JavaScript"></li>
-                                <li><img src="assets/images/tech/html.png" alt="HTML" class="tech-icon" title="HTML"></li>
-                                <li><img src="assets/images/tech/css.png" alt="CSS" class="tech-icon" title="CSS"></li>
-                                <li><img src="assets/images/tech/net.png" alt=".NET" class="tech-icon" title=".NET"></li>
-                                <li><img src="assets/images/tech/django.png" alt="Django" class="tech-icon" title="Django"></li>
+                                <li><img src="assets/images/tech/angular.png" alt="Angular" class="tech-icon" title="Angular (v18+)"></li>
+                                <li><img src="assets/images/tech/js.png" alt="JavaScript / TypeScript" class="tech-icon" title="JavaScript / TypeScript"></li>
+                                <li><img src="assets/images/tech/html.png" alt="HTML5" class="tech-icon" title="HTML5"></li>
+                                <li><img src="assets/images/tech/css.png" alt="CSS3 / Sass" class="tech-icon" title="CSS3 / Sass"></li>
+                                <li><img src="assets/images/tech/net.png" alt="C# / .NET / ASP.NET Core" class="tech-icon" title="C# / .NET / ASP.NET Core"></li>
+                                <li><img src="assets/images/tech/django.png" alt="Python / Django" class="tech-icon" title="Python / Django"></li>
                                 <li><img src="assets/images/tech/sql.png" alt="SQL Server" class="tech-icon" title="SQL Server"></li>
                                 <li><img src="assets/images/tech/postgres.png" alt="PostgreSQL" class="tech-icon" title="PostgreSQL"></li>
-                                <li><img src="assets/images/tech/aws.png" alt="AWS" class="tech-icon" title="AWS"></li>
-                                <li><img src="assets/images/tech/azure.png" alt="Azure" class="tech-icon" title="Azure"></li>
+                                <li><img src="assets/images/tech/azure.png" alt="Azure" class="tech-icon" title="Azure (OpenAI, AI Foundry, DevOps)"></li>
+                                <li><img src="assets/images/tech/aws.png" alt="AWS" class="tech-icon" title="AWS (S3, Lambda, CloudWatch)"></li>
                                 <li><img src="assets/images/tech/github.png" alt="GitHub" class="tech-icon" title="GitHub"></li>
                                 <li><img src="assets/images/tech/jira.png" alt="Jira" class="tech-icon" title="Jira"></li>
                                 <li><img src="assets/images/tech/postman.png" alt="Postman" class="tech-icon" title="Postman"></li>
                                 <li><img src="assets/images/tech/arcgis.png" alt="ArcGIS" class="tech-icon" title="ArcGIS"></li>
                                 <li><img src="assets/images/tech/auth0.png" alt="Auth0" class="tech-icon" title="Auth0"></li>
                             </ul>
+
+                            <div class="skills-summary">
+                                <div class="skills-category">
+                                    <div class="skills-category__title">AI & LLMs</div>
+                                    <div class="skills-category__items">LangGraph, RAG, Vector Search, Prompt Engineering, Azure OpenAI, Azure AI Foundry</div>
+                                </div>
+                                <div class="skills-category">
+                                    <div class="skills-category__title">Frontend Development</div>
+                                    <div class="skills-category__items">TypeScript, Angular (v18+), HTML5, CSS3/Sass, JavaScript (ES6+)</div>
+                                </div>
+                                <div class="skills-category">
+                                    <div class="skills-category__title">Backend Engineering</div>
+                                    <div class="skills-category__items">Python (Django), C#, ASP.NET Core / .NET, RESTful APIs, Auth0</div>
+                                </div>
+                                <div class="skills-category">
+                                    <div class="skills-category__title">Cloud & DevOps</div>
+                                    <div class="skills-category__items">Azure (Storage, Service Bus, Function Apps, App Insights), AWS (S3, Lambda, CloudWatch), Azure DevOps, CI/CD</div>
+                                </div>
+                                <div class="skills-category">
+                                    <div class="skills-category__title">Database & GIS</div>
+                                    <div class="skills-category__items">SQL Server, PostgreSQL, ArcGIS (Geospatial Analytics & Location Intelligence)</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -325,27 +427,64 @@
                         <article class="project-card">
                             <img class="project-card__media" src="assets/images/ACC.jpg" alt="Appalachian Community Capital project thumbnail">
                             <div class="project-card__body">
-                                <h3 class="project-card__title">ACC</h3>
-                                <p class="project-card__stack">Angular 18, Django, SQL, Azure</p>
-                                <p class="project-card__desc">Built a financial platform connecting CDFIs with small businesses to improve access to funding opportunities. Led a team of 4 and owned architecture and delivery.</p>
+                                <h3 class="project-card__title">Appalachian Community Capital</h3>
+                                <div class="project-card__role">Lead Developer | 2024 – Present</div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill">LangGraph</span>
+                                    <span class="skill-pill">RAG / Vector Search</span>
+                                    <span class="skill-pill">Azure AI</span>
+                                    <span class="skill-pill">ArcGIS</span>
+                                    <span class="skill-pill">Azure DevOps</span>
+                                </div>
+                                <ul class="project-card__bullets">
+                                    <li>Led a team of 4 to design & develop a financial platform connecting CDFIs with small businesses seeking funding.</li>
+                                    <li>Architected end-to-end solution including responsive UI/UX and scalable Azure cloud services (Storage, Service Bus, Function Apps, App Insights).</li>
+                                    <li>Developed an AI-powered chatbot using <strong>LangGraph, Azure AI, and RAG with vector search</strong> for enterprise knowledge lookup.</li>
+                                    <li>Integrated <strong>ArcGIS</strong> for interactive maps, geospatial analytics, and location intelligence.</li>
+                                    <li>Built & maintained CI/CD pipelines using Azure DevOps for production monitoring and reliable deployments.</li>
+                                </ul>
                             </div>
                         </article>
 
                         <article class="project-card">
-                            <img class="project-card__media" src="assets/images/trubridge.jpg" alt="TrueBridge project thumbnail">
+                            <img class="project-card__media" src="assets/images/trubridge.jpg" alt="TruBridge project thumbnail">
                             <div class="project-card__body">
-                                <h3 class="project-card__title">TruBridge (Get Real Health)</h3>
-                                <p class="project-card__stack">Angular, .NET, C#, SQL, HealthKit</p>
-                                <p class="project-card__desc">Contributed to a healthcare coordination platform used by the Alberta Government. Integrated Apple HealthKit for real-time patient health insights.</p>
+                                <h3 class="project-card__title">TruBridge</h3>
+                                <div class="project-card__role">Full Stack Developer | 2022 – 2023</div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill">Angular</span>
+                                    <span class="skill-pill">.NET / C#</span>
+                                    <span class="skill-pill">Apple HealthKit</span>
+                                    <span class="skill-pill">REST APIs</span>
+                                    <span class="skill-pill">Healthcare</span>
+                                </div>
+                                <ul class="project-card__bullets">
+                                    <li>Developed features for a healthcare coordination platform used to manage patient data and health insights for the Alberta Government.</li>
+                                    <li>Integrated <strong>Apple HealthKit</strong> to securely synchronize real-time health and fitness data for patient monitoring.</li>
+                                    <li>Designed and implemented REST API integrations for secure data exchange between mobile applications and backend services.</li>
+                                    <li>Enhanced application performance, usability, and data visualization via responsive UI components.</li>
+                                </ul>
                             </div>
                         </article>
 
                         <article class="project-card">
-                            <img class="project-card__media" src="assets/images/prifact.png" alt="Prifact project thumbnail">
+                            <img class="project-card__media" src="assets/images/prifact.png" alt="priFact project thumbnail">
                             <div class="project-card__body">
                                 <h3 class="project-card__title">priFact</h3>
-                                <p class="project-card__stack">Angular, Django, .NET, AWS, Azure</p>
-                                <p class="project-card__desc">Delivered and maintained production-ready web and mobile solutions with robust APIs, cloud deployments, and performance optimizations across domains.</p>
+                                <div class="project-card__role">Full Stack Developer | 2019 – 2022</div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill">Multi-Tenant SaaS</span>
+                                    <span class="skill-pill">AWS S3/Lambda</span>
+                                    <span class="skill-pill">Angular</span>
+                                    <span class="skill-pill">.NET</span>
+                                    <span class="skill-pill">Agile</span>
+                                </div>
+                                <ul class="project-card__bullets">
+                                    <li>Developed a multi-tenant SaaS platform enabling schools to manage students, teachers, courses, and administrative workflows.</li>
+                                    <li>Gathered client requirements and translated business needs into scalable software solutions and new features.</li>
+                                    <li>Designed core modules including user management, reporting, notifications, and communication tools.</li>
+                                    <li>Leveraged AWS services (S3, Lambda, CloudWatch) for file storage, serverless processing, monitoring, and app reliability.</li>
+                                </ul>
                             </div>
                         </article>
                     </div>
@@ -359,25 +498,25 @@
                 <div class="column counter-items__item">
                     <div class="num">7<span>+</span></div>
                     <h5>Years Experience</h5>
-                    <p>Hands-on delivery across full stack web and mobile development.</p>
+                    <p>Hands-on delivery across full stack enterprise web & mobile development.</p>
                 </div>
 
                 <div class="column counter-items__item">
                     <div class="num">3<span>+</span></div>
                     <h5>Core Domains</h5>
-                    <p>Fintech, healthcare, and education product development.</p>
+                    <p>Fintech, Healthcare, and Education domain products.</p>
                 </div>
 
                 <div class="column counter-items__item">
-                    <div class="num">10<span>+</span></div>
-                    <h5>Production Releases</h5>
-                    <p>Delivered and maintained apps through active production cycles.</p>
+                    <div class="num">AI</div>
+                    <h5>GenAI & LLMs</h5>
+                    <p>LangGraph, RAG, Azure AI, Vector Search, and Prompt Engineering.</p>
                 </div>
 
                 <div class="column counter-items__item">
                     <div class="num">100<span>%</span></div>
                     <h5>Ownership Mindset</h5>
-                    <p>Architecture, coding, deployment, and post-release support.</p>
+                    <p>Architecture, development, CI/CD, deployment, and post-release support.</p>
                 </div>
             </div>
         </section>
@@ -394,7 +533,7 @@
             <div class="row s-footer__content">
                 <div class="column xl-6 md-12 s-footer__block s-footer__about">
                     <p class="attention-getter">
-                        Open to full stack software development opportunities and collaboration on impactful products.
+                        Open to Senior Full Stack Software Development opportunities and collaboration on impactful products.
                     </p>
                 </div>
 
@@ -404,13 +543,16 @@
                             <h5>Follow Me</h5>
                             <ul class="link-list">
                                 <li><a href="http://linkedin.com/in/jashim-gafoor-k-k" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                                <li><a href="https://github.com/jashi202jg" target="_blank" rel="noreferrer">GitHub</a></li>
+                                <li><a href="https://www.instagram.com/jashi_kk/" target="_blank" rel="noreferrer">Instagram</a></li>
                             </ul>
                         </div>
                         <div class="column xl-6 md-6 tab-12">
                             <h5>Contact Me</h5>
                             <ul class="link-list">
                                 <li><a href="mailto:jashi202jg@gmail.com">jashi202jg@gmail.com</a></li>
-                                <li><a href="#0">Malappuram, Kerala, India</a></li>
+                                <li><a href="tel:+919946167742">+91-9946167742</a></li>
+                                <li><a href="#0">Kerala, India</a></li>
                             </ul>
                         </div>
                     </div>
@@ -431,6 +573,7 @@
                     <ul class="s-footer__social social-list">
                         <li><a href="mailto:jashi202jg@gmail.com"><span class="u-screen-reader-text">Email</span>@</a></li>
                         <li><a href="http://linkedin.com/in/jashim-gafoor-k-k" target="_blank" rel="noreferrer"><span class="u-screen-reader-text">LinkedIn</span>in</a></li>
+                        <li><a href="https://github.com/jashi202jg" target="_blank" rel="noreferrer"><span class="u-screen-reader-text">GitHub</span>gh</a></li>
                         <li><a href="https://www.instagram.com/jashi_kk/" target="_blank" rel="noreferrer"><span class="u-screen-reader-text">Instagram</span>ig</a></li>
                     </ul>
                 </div>
